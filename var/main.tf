@@ -28,3 +28,9 @@ resource "aws_instance" "example" {
     instance_type = var.instance_type
     key_name   = var.key_value
 }
+
+output "public_ip" {
+    description = "The public IP address of the EC2 instance"
+    value       = aws_instance.example.public_ip
+  
+}
